@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<span slot="title">PrimerPaso.com — Conectando estudiantes y empresas</span>
+
+	<section class="hero">
+		<div class="container hero-grid">
+			<div class="hero-left">
+				<h2>Tu primer paso hacia una carrera profesional exitosa</h2>
+				<p class="lead">En PrimerPaso.com conectamos a estudiantes y recién titulados con empresas que buscan talento fresco, formado y con ganas de crecer. Facilitamos prácticas, empleos y programas de formación con convenios reales.</p>
+				<div class="search-row">
+					<input id="searchInput" placeholder="Buscar: título, empresa o ubicación" />
+					<select id="filterLocation"><option value="">Cualquier lugar</option><option>Remoto</option><option>Presencial</option></select>
+					<div class="cta-row">
+						<a class="btn warm" href="/loginuser" aria-label="Soy estudiante">Soy estudiante</a>
+						<a class="btn cool" href="/company-login" aria-label="Soy empresa">Soy empresa</a>
+					</div>
+				</div>
+			</div>
+			<div class="hero-right">
+				<div class="card visual-card">
+					<h3>Encuentra prácticas, becas y empleos</h3>
+					<p class="muted">Filtra por área, modalidad y duración. Plataforma pensada para estudiantes.</p>
+					<div class="search-mock">
+						<input placeholder="Busca: Frontend, Marketing, Data..." />
+						<button class="btn warm">Buscar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="mision" class="section light">
+		<div class="container">
+			<h2>Nuestra misión</h2>
+			<p>Empoderar a estudiantes y recién graduados para entrar al mercado laboral con confianza, y brindar a las empresas acceso a talento joven, formado y motivado. Trabajamos con universidades y centros de formación para cerrar la brecha entre estudio y empleo.</p>
+		</div>
+	</section>
+
+	<section id="especializacion" class="section">
+		<div class="container">
+			<h2>Áreas de especialización</h2>
+			<div class="grid-areas">
+				<article class="card area warm">
+					<h3>Frontend & UX</h3>
+					<p>Diseño de interfaces, accesibilidad y desarrollo web moderno.</p>
+				</article>
+				<article class="card area warm-2">
+					<h3>Data Science</h3>
+					<p>Analítica, visualización y modelado para la toma de decisiones.</p>
+				</article>
+				<article class="card area cool">
+					<h3>FinTech & Business</h3>
+					<p>Soluciones para finanzas, análisis de negocio y diseño de procesos.</p>
+				</article>
+				<article class="card area cool-2">
+					<h3>Marketing Digital</h3>
+					<p>Estrategia, contenido y crecimiento digital para marcas.</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="empresas" class="section light">
+		<div class="container">
+			<h2>Empresas con convenios</h2>
+			<div class="partners">
+				<div class="partner">DataLabs</div>
+				<div class="partner">FinTech Hub</div>
+				<div class="partner">Creative Agency</div>
+				<div class="partner">GreenEnergy</div>
+				<div class="partner">HealthCo</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="certificaciones" class="section">
+		<div class="container">
+			<h2>Certificaciones y reconocimientos</h2>
+			<div class="cert-grid">
+				<div class="cert card">Sello Universitario de Prácticas</div>
+				<div class="cert card">Acreditación de Empleabilidad 2024</div>
+				<div class="cert card">Mejor Plataforma Estudiantil 2023</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="estadisticas" class="section stats">
+		<div class="container">
+			<h2>Impacto en números</h2>
+			<div class="stats-grid">
+				<div class="stat card">
+					<h3 class="num" data-target="1240">0</h3>
+					<p>Estudiantes colocados</p>
+				</div>
+				<div class="stat card">
+					<h3 class="num" data-target="320">0</h3>
+					<p>Empresas asociadas</p>
+				</div>
+				<div class="stat card">
+					<h3 class="num" data-target="87">0</h3>
+					<p>Tasa de éxito (%)</p>
+				</div>
+				<div class="stat card">
+					<h3 class="num" data-target="15">0</h3>
+					<p>Programas certificados</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section cta-quote">
+		<div class="container">
+			<div class="cta-card card">
+				<h2>¿Listo para dar tu primer paso?</h2>
+				<p class="muted">Únete como estudiante o publica oportunidades en tu empresa. Con PrimerPaso acortas la distancia entre talento y trabajo.</p>
+				<div class="cta-row">
+					<a class="btn warm" href="/loginuser">Soy estudiante</a>
+					<a class="btn cool ghost" href="/company-login">Soy empresa</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</BaseLayout>

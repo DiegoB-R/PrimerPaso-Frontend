@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Registro empresa | PrimerPaso">
+</main>
+  <main class="container">
+    <section class="company-signup" style="margin:3rem auto;padding:2rem 0">
+      <div class="signup-grid">
+        <div class="signup-info">
+          <h1>Registro para empresas</h1>
+          <p class="muted">Crea una cuenta para publicar ofertas, revisar postulaciones y gestionar tu marca empleadora.</p>
+          <ul class="benefits">
+            <li><strong>Publica ofertas</strong> en minutos</li>
+            <li><strong>Gestiona postulaciones</strong> desde un panel central</li>
+            <li><strong>Contacta</strong> directamente a candidatos</li>
+          </ul>
+        </div>
+
+        <div class="signup-card card">
+          <form id="signupForm" method="post" class="signup-form">
+            <input type="hidden" name="role" value="company" />
+
+            <div class="form-row">
+              <label for="name">Nombre de la empresa</label>
+              <input id="name" name="name" type="text" required placeholder="Ej: Acme S.A." />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email de contacto</label>
+              <input id="email" name="email" type="email" required placeholder="contacto@empresa.com" />
+            </div>
+
+            <div class="form-grid">
+              <div>
+                <label for="password">Contraseña</label>
+                <input id="password" name="password" type="password" required minlength="8" placeholder="Mínimo 8 caracteres" />
+              </div>
+              <div>
+                <label for="confirmPassword">Confirmar contraseña</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" required minlength="8" placeholder="Repite la contraseña" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="website">Sitio web</label>
+              <input id="website" name="website" type="url" placeholder="https://empresa.example" />
+            </div>
+
+            <div class="form-row">
+              <label for="location">Ubicación</label>
+              <input id="location" name="location" type="text" placeholder="Ciudad, País" />
+            </div>
+
+            <div class="form-row">
+              <label for="description">Descripción corta</label>
+              <textarea id="description" name="description" rows="4" placeholder="Breve descripción de la empresa"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Crear cuenta</button>
+              <a class="btn ghost" href="/company-login">¿Ya tienes cuenta?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/signup/signup.js"></script>
+
+  <style>
+    .company-signup .signup-grid{display:grid;grid-template-columns:1fr 480px;gap:28px;align-items:start}
+    .company-signup .signup-info h1{font-size:2rem;margin:0 0 10px;color:var(--morado-dark)}
+    .company-signup .signup-info .muted{color:var(--muted);max-width:36ch}
+    .company-signup .benefits{margin-top:14px;list-style:none;padding:0;color:var(--morado-dark)}
+    .company-signup .benefits li{margin:8px 0;padding-left:12px;position:relative}
+    .company-signup .benefits li:before{content:'•';position:absolute;left:0;color:var(--morado)}
+
+    .signup-card{background:linear-gradient(180deg, rgba(74,44,116,0.95), rgba(74,44,116,0.87));color:#fff;padding:22px;border-radius:12px}
+    .signup-card .signup-form label{display:block;margin-top:10px;color:rgba(255,255,255,0.9);font-weight:700}
+    .signup-card input[type="text"],.signup-card input[type="email"],.signup-card input[type="password"],.signup-card input[type="url"],.signup-card textarea{width:100%;padding:10px;border-radius:8px;border:0;margin-top:8px}
+    .signup-card textarea{min-height:88px}
+    .signup-card .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .signup-card .form-actions{display:flex;gap:10px;align-items:center;margin-top:12px}
+    .signup-card .btn.primary{background:linear-gradient(90deg,var(--morado),var(--morado-dark));color:#fff;padding:10px 14px;border-radius:10px}
+    .signup-card .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.95);padding:8px 12px;border-radius:10px;text-decoration:none}
+
+    @media (max-width:980px){.company-signup .signup-grid{grid-template-columns:1fr}.signup-card{margin-top:18px}}
+    /* Page-local header override: make header purple only on this page */
+    header.site-header {
+      background: var(--morado, #4b2b88) !important;
+      border-bottom: none !important;
+    }
+    header.site-header .brand { color: #fff !important; }
+    header.site-header nav a, header.site-header .nav-link { color: rgba(255,255,255,0.95) !important; }
+    header.site-header .nav a:hover, header.site-header .nav-link:hover { color: #fff !important; }
+    header.site-header .btn-login { background: #fff !important; color: var(--morado,#4b2b88) !important; border-radius:8px !important; font-weight:700 !important; }
+    header.site-header .btn-register { border-color: rgba(255,255,255,0.12) !important; color: #fff !important; }
+
+    /* Hide the 'Registro' dropdown in the header for this page only */
+    header.site-header .register-dropdown { display: none !important; }
+    /* Also hide the 'Acceso' dropdown in the header for this page only */
+    header.site-header .access-dropdown { display: none !important; }
+  </style>
+</Layout>

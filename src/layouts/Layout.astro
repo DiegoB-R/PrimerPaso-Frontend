@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>PrimerPaso</title>
+		<link rel="stylesheet" href="/css/styles.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-row">
+				<a class="brand" href="/">PrimerPaso</a>
+				<nav class="main-nav">
+					<a href="/">Inicio</a>
+					<a href="/jobs">Ofertas</a>
+					<!-- Acceso dropdown removed -->
+					<a href="/company-login">Empresas</a>
+				</nav>
+
+				<!-- Registro dropdown removed -->
+
+				<a class="btn-login" href="/loginuser">Iniciar sesión</a>
+			</div>
+		</header>
+
+			<!-- Quick actions removed (was populated by client JS) -->
+
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	html, body { margin: 0; width: 100%; height: 100%; font-family: system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif }
+	.site-header{background: linear-gradient(90deg,#b02a37,#4b2b88); padding:12px 0; border-bottom:none}
+	.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+	.brand{font-weight:700;color:#fff;text-decoration:none}
+	.main-nav a{margin-left:12px;color:rgba(255,255,255,0.95);text-decoration:none}
+	/* Make the access toggle match nav link typography and spacing */
+	.main-nav .access-toggle{margin-left:12px;color:inherit;text-decoration:none;background:transparent;border:none;padding:0;font:inherit;cursor:pointer}
+	.btn-login{background:#2ea44f;color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;margin-left:18px}
+	.btn-login:hover{filter:brightness(.95)}
+
+
+
+		/* Quick actions removed */
+</style>

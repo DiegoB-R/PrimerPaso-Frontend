@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Publicar vacante | PrimerPaso">
+  <main class="container" style="padding:2rem 0">
+    <div style="max-width:880px;margin:0 auto">
+      <h1>Publicar nueva vacante</h1>
+      <p class="muted">Completa los datos principales de la oferta. Puedes guardar como borrador o publicar.</p>
+
+      <form id="jobForm" style="margin-top:18px"> 
+        <div class="form-row">
+          <label for="title">Título</label>
+          <input id="title" name="title" required placeholder="Ej: Desarrollador Frontend" />
+        </div>
+
+        <div class="form-row">
+          <label for="description">Descripción</label>
+          <textarea id="description" name="description" rows="6" required placeholder="Descripción de la vacante"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="requirements">Requisitos (separados por comas)</label>
+          <textarea id="requirements" name="requirements" rows="3" placeholder="HTML, CSS, JS, React"></textarea>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <label for="job_type">Tipo de jornada</label>
+            <select id="job_type" name="job_type">
+              <option value="full_time">Jornada completa</option>
+              <option value="part_time">Medio tiempo</option>
+              <option value="remote">Remoto</option>
+              <option value="hybrid">Híbrido</option>
+            </select>
+          </div>
+          <div>
+            <label for="location">Ubicación</label>
+            <input id="location" name="location" placeholder="Ciudad, País" />
+          </div>
+        </div>
+
+        <div class="form-grid" style="margin-top:8px">
+          <div>
+            <label for="salary">Salario (opcional)</label>
+            <input id="salary" name="salary" placeholder="p.ej. 30.000 - 40.000" />
+          </div>
+          <div>
+            <label for="apply_link">Link de postulación</label>
+            <input id="apply_link" name="apply_link" placeholder="https://..." />
+          </div>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px">
+          <button type="button" id="saveDraft" class="btn ghost">Guardar borrador</button>
+          <button type="button" id="publish" class="btn primary">Publicar</button>
+          <a class="btn" href="/company-dashboard">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="/js/company-jobs.js"></script>
+
+  <style>
+    .muted{color:var(--muted,#6b6b6b)}
+    .form-row{margin-top:10px}
+    label{display:block;font-weight:700;margin-bottom:6px}
+    input, textarea, select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .btn{padding:8px 12px;border-radius:8px;text-decoration:none;border:0;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--morado,#4b2b88),#4b2b88);color:#fff}
+    .btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.08)}
+  </style>
+</Layout>

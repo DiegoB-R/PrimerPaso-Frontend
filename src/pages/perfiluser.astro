@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <span slot="title">Mi perfil — PrimerPaso</span>
+
+  <main class="container login-container">
+    <section class="login-card card">
+      <div class="logo-hero">
+        <div class="logo">Perfil de <span>Estudiante</span></div>
+        <p class="muted">Completa o edita tu perfil para que las empresas puedan encontrarte.</p>
+      </div>
+
+      <form id="profileForm" class="login-form" novalidate>
+        <div class="two-col">
+          <div>
+            <label for="firstName">Nombre</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Tu nombre" />
+
+            <label for="lastName">Apellido</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Tu apellido" />
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tu@universidad.edu" />
+
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="phone" type="tel" placeholder="+51 9xx xxx xxx" />
+
+            <label for="university">Universidad</label>
+            <input id="university" name="university" type="text" placeholder="Universidad" />
+
+            <label for="degree">Carrera / Grado</label>
+            <input id="degree" name="degree" type="text" placeholder="Ingeniería de Sistemas" />
+          </div>
+
+          <div>
+            <label for="gradYear">Año de graduación</label>
+            <input id="gradYear" name="gradYear" type="number" placeholder="2025" />
+
+            <label for="skills">Habilidades (separadas por comas)</label>
+            <input id="skills" name="skills" type="text" placeholder="JavaScript, Python, SQL" />
+
+            <label for="experience">Años de experiencia</label>
+            <input id="experience" name="experience" type="number" placeholder="0" />
+
+            <label for="linkedin">LinkedIn</label>
+            <input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/tu-perfil" />
+
+            <label for="portfolio">Portafolio / GitHub</label>
+            <input id="portfolio" name="portfolio" type="url" placeholder="https://github.com/tu-username" />
+
+          </div>
+        </div>
+
+        <label for="bio">Resumen / Acerca de</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Un breve resumen sobre tu experiencia y objetivos"></textarea>
+
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <button type="submit" class="btn primary">Guardar perfil</button>
+          <a class="btn ghost" href="/integradora">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="/profile/perfiluser.js"></script>
+
+  <style>
+    .login-container{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 88px);padding:48px 0}
+    .login-card{max-width:900px;width:100%;margin:0;padding:28px}
+    .logo-hero .logo{font-size:20px;margin-bottom:6px}
+    .logo-hero p.muted{margin:0 0 14px 0}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .login-form label{display:block;margin:10px 0 6px;font-weight:600}
+    .login-form input,.login-form textarea{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(11,23,39,0.08);box-sizing:border-box}
+    .btn.primary{padding:10px 16px}
+    @media (max-width:900px){.two-col{grid-template-columns:1fr}}
+  </style>
+</BaseLayout>

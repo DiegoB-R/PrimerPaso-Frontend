@@ -1,0 +1,136 @@
+
+/* Global styles copied from src/styles/jobs.css (full restored stylesheet) */
+:root{
+  --bg-1: linear-gradient(135deg,#f6f8ff 0%, #eef7f6 100%);
+  --primary: #9d0e02;
+  --accent: #00C2A8;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --glass: rgba(255,255,255,0.7);
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;background:var(--bg-1);color:#0f172a}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.site-header{background:linear-gradient(90deg,var(--primary),indigo);color:#fff;padding:12px 0;box-shadow:0 6px 18px rgba(108,99,255,0.12)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:700;font-size:1.4rem}
+.logo span{color:var(--accent)}
+.nav .btn{margin-left:8px}
+.btn{border:0;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.15)}
+.btn.primary{background:var(--accent);color:#fff}
+.site-header nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:12px;font-weight:600}
+.site-header nav a:hover{opacity:0.9;text-decoration:underline}
+.main-grid{display:grid;grid-template-columns:240px 1fr 260px;gap:20px;padding:24px 20px}
+.sidebar .card,.aside-right .card,.hero.card,.profile-card{background:var(--card-bg);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+.profile-card .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.2rem;margin-bottom:8px}
+.muted{color:var(--muted)}
+.small{font-size:0.9rem;color:var(--muted)}
+.full{width:100%;margin-top:12px}
+.hero{padding:26px}
+.search-row{display:flex;gap:8px;margin-top:12px}
+.search-row input,.search-row select{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef2}
+.jobs-list{display:grid;gap:12px;margin-top:18px}
+.job-card{display:flex;justify-content:space-between;align-items:flex-start;padding:16px;border-radius:10px;background:linear-gradient(90deg,rgba(108,99,255,0.06),rgba(0,194,168,0.03));border:1px solid rgba(16,24,40,0.03)}
+.job-left{max-width:75%}
+.job-title{font-weight:700;margin:0}
+.job-meta{color:var(--muted);font-size:0.95rem}
+.apply-row{display:flex;gap:8px;align-items:center}
+.badge{background:var(--primary);color:#fff;padding:6px 8px;border-radius:8px;font-weight:700}
+.aside-right .card{margin-bottom:12px}
+.site-footer{padding:20px 0;text-align:center;color:#475569}
+.modal{position:fixed;inset:0;background:rgba(2,6,23,0.5);display:flex;align-items:center;justify-content:center}
+.modal.hidden{display:none}
+.modal-content{background:var(--card-bg);padding:18px;border-radius:12px;max-width:720px;width:94%;position:relative}
+.modal-close{position:absolute;right:12px;top:12px;border:0;background:transparent;font-size:1.1rem;cursor:pointer}
+@media (max-width:980px){.main-grid{grid-template-columns:1fr}.aside-right{order:3}.sidebar{order:2}}
+
+/* Additional landing styles */
+:root{
+  --bg:#fff8f6;
+  --terracota:#9d0e02;
+  --terracota-dark:#9b3f35;
+  --morado:indigo;
+  --morado-dark:#4a2c74;
+  --warm:#ff7a45;
+  --cool:#3b5bff;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --glass:rgba(255,255,255,0.7);
+}
+body{background-color:var(--bg);background-image:linear-gradient(180deg,rgba(199,90,74,0.04) 0%, rgba(107,63,166,0.04) 100%);}
+.lp-header{background:linear-gradient(90deg,var(--terracota),var(--morado));color:#fff;padding:18px 0}
+.brand h1{font-size:1.6rem;margin:0}
+.brand h1 span{color:var(--warm)}
+.brand .tag{margin:4px 0 0;font-weight:500;opacity:0.95}
+.lp-nav{display:flex;gap:14px;align-items:center}
+.lp-nav a{color:rgba(255,255,255,0.95);text-decoration:none}
+.lp-nav .btn.primary{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);color:#fff;padding:8px 12px;border-radius:8px}
+.hero{padding:48px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+.hero-left h2{font-size:2rem;margin:0 0 12px}
+.hero-left .lead{color:var(--muted);max-width:56ch}
+.cta-row{display:flex;gap:12px;margin-top:16px}
+.btn.warm{background:var(--terracota);color:#fff}
+.btn.cool{background:var(--morado);color:#fff}
+.cta-row .btn{padding:14px 20px;border-radius:12px;font-size:1rem}
+
+/* Larger CTA style used on landing */
+.btn.large{padding:16px 22px;border-radius:14px;font-size:1.05rem;box-shadow:0 8px 24px rgba(16,24,40,0.08)}
+
+/* Professional tweaks */
+body{color:#0b1220}
+.card{transition:box-shadow .18s ease,transform .12s ease}
+.card:hover{box-shadow:0 20px 40px rgba(16,24,40,0.08);transform:translateY(-4px)}
+
+/* Header container layout used by BaseLayout */
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+
+.visual-card{padding:18px}
+.search-mock{display:flex;gap:8px;margin-top:12px}
+.section{padding:40px 0}
+.grid-areas{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.area{padding:18px;border-radius:12px}
+.partners{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.partner{padding:12px 16px;border-radius:10px;background:#fff;border:1px solid rgba(15,23,42,0.05);font-weight:600}
+.cert-grid{display:flex;gap:12px;margin-top:12px}
+.cert{padding:12px;border-radius:10px;flex:1;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.stat{padding:18px;border-radius:12px;text-align:center;background:var(--card);box-shadow:0 8px 24px rgba(15,23,42,0.04)}
+.stat .num{font-size:1.8rem;color:var(--morado-dark);margin:0}
+.cta-quote .cta-card{display:flex;align-items:center;justify-content:space-between;padding:20px;gap:12px}
+.lp-footer{background:#fff;padding:24px 0;border-top:1px solid rgba(15,23,42,0.04)}
+.foot-grid{display:flex;justify-content:space-between;align-items:center}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}.grid-areas{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.hero-right{order:-1}}
+
+/* Login-specific helpers (social buttons visibility & spacing) */
+.login-container{display:flex;justify-content:center;padding:40px}
+.login-card{width:420px;max-width:94%;padding:28px;border-radius:14px;box-shadow:0 18px 40px rgba(16,24,40,0.08);background:var(--card)}
+.login-form label{display:block;margin-top:12px;color:var(--muted);font-weight:600}
+.login-form input[type="email"],.login-form input[type="password"]{width:100%;padding:12px;border-radius:10px;border:1px solid #e6eef2;margin-top:8px;box-shadow:none}
+.login-form input::placeholder{color:#9ca3af}
+.form-row.between{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.checkbox{display:flex;align-items:center;gap:8px}
+.checkbox input{width:16px;height:16px}
+.divider{display:flex;align-items:center;justify-content:center;margin:14px 0}
+.divider span{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--glass);font-weight:700;color:var(--muted);}
+.socials{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.socials .btn{display:flex;align-items:center;gap:10px;justify-content:center;padding:10px;border-radius:10px}
+.socials .btn.full{width:100%}
+.socials .icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:6px;background:rgba(0,0,0,0.04);font-weight:700}
+.socials .btn.ghost{color:var(--primary);border:1px solid rgba(15,23,42,0.06);background:transparent}
+.socials .btn.ghost:hover{background:rgba(0,0,0,0.03)}
+.center{text-align:center}
+@media (max-width:480px){.login-card{padding:18px}}
+
+/* Company-login specific styling: purple accent and professional card */
+.company-login .logo span{color:var(--morado)}
+.company-login .login-card{background:linear-gradient(180deg, rgba(74,44,116,0.95), rgba(74,44,116,0.87));color:#fff}
+.company-login .login-card .muted{color:rgba(255,255,255,0.85)}
+.company-login .login-card input{background:#fff;border-radius:8px;padding:10px;border:1px solid rgba(0,0,0,0.06);color:#0f172a}
+.company-login .login-card label{color:rgba(255,255,255,0.9)}
+.company-login .btn.primary{background:linear-gradient(90deg,var(--morado),var(--morado-dark));color:#fff}
+.company-login .login-card .logo-hero{margin-bottom:8px}
+.company-login .login-card .logo{font-weight:800}
+
+

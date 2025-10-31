@@ -1,0 +1,21 @@
+---
+// Redirect legacy/expected URL /company-jobs/new -> /company-jobs-new
+export async function GET() {
+  return new Response(null, {
+    status: 302,
+    headers: { Location: '/company-jobs-new' }
+  });
+}
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0;url=/company-jobs-new" />
+    <title>Redirigiendo…</title>
+  </head>
+  <body>
+    <p>Si no se redirige automáticamente, <a href="/company-jobs-new">haz clic aquí</a>.</p>
+  </body>
+</html>
