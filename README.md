@@ -1,23 +1,3 @@
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-
 # PrimerPaso — Frontend (Astro)
 
 Este repositorio actúa como contenedor del frontend del proyecto PrimerPaso. El código fuente del frontend se mantiene en la rama `frontend`.
