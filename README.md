@@ -44,3 +44,24 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+Repository branch layout (project standard)
+
+This repository follows the team's branching convention: the code for each major component lives in its own branch. The `main` branch intentionally does NOT contain frontend or backend source code — it holds documentation and project-level notes only. Current branches:
+
+- `frontend` — contains the full frontend code (Astro project, `src/`, `public/`, build tooling). This is the working branch for front-end development.
+- `backend` — contains only the backend API files extracted from this repo (kept here as a backup). The canonical backend repo is external: https://github.com/Eroroshy/PrimerPaso-Back
+
+Workflow notes
+
+- Create feature branches from `frontend` (for example `frontend/feature/auth-ui`) and open pull requests into `frontend` when ready.
+- Create feature branches from `backend` (for example `backend/feature/auth-api`) and push to the backend repo for collaboration.
+- `main` remains a documentation branch summarizing structure, sprint notes and deliverables.
+
+SCRUM & deliverables
+
+Follow the sprint cadence and maintain descriptive commits. Include sprint notes and short demo instructions in `docs/` (create this directory on `main` if needed).
+
+If you need me to push the backend branch to the external backend repo (https://github.com/Eroroshy/PrimerPaso-Back), I can attempt to push a branch named `initial-backend` — note: that operation requires write permission on the target repo. If permission is not available I will provide exact commands for you to run from an account with access.
